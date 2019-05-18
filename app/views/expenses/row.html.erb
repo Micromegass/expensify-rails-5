@@ -1,0 +1,7 @@
+<tr id="<%= expense.id %>">
+  <td><%= expense.description %></td>
+  <td><%= expense.amount %></td>
+  <td>
+    <%= link_to "Edit", edit_expense_path(expense), remote: true %>
+  </td>
+</tr>
