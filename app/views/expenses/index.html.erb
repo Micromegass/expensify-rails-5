@@ -55,14 +55,14 @@
           </tr>
         </thead>
         <tbody>
+          <% @expenses.each do |expense| %>
           <tr>
             <td class="date">
-              <div class="day">24</div>
-              <div class="month">Apr</div>
+              <div><%= expense.date %></div>
             </td>
             <td>
               <div>
-                <span class="type">Purchase</span>
+                <span class="type"><%= expense.type %></span>
               </div>
               <div>
                 <span class="concept">Example concept</span>
@@ -70,11 +70,12 @@
             </td>
             <td class="category text-right">Restauratns</td>
             <td class="text-right" style="width: 170px;">
-              <div class="amount">$1,000,000</div>
+              <div class="amount"><% expense.amount %></div>
               <div class="actions">
                 <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                 <a href="#"><span class="glyphicon glyphicon-trash"></span> Delete</a>
             </td>
+            <% end %>
           </tr>
         </tbody>
       </table>
