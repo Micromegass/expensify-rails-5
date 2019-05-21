@@ -1,7 +1,10 @@
 <tr id="<%= expense.id %>">
-  <td><%= expense.description %></td>
+  <td><%= expense.date %></td>
+  <td><%= expense.type %></td>
+  <td></td>
   <td><%= expense.amount %></td>
   <td>
     <%= link_to "Edit", edit_expense_path(expense), remote: true %>
+    <%= link_to "Delete", edit_expense_path(expense), remote: true %>
   </td>
 </tr>

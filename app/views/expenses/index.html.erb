@@ -33,8 +33,8 @@
 
       <div class="row" style="margin-top: 20px;">
         <div class="col-md-12">
-          <span class="glyphicon glyphicon-plus"></span> <%= link_to "New Expense", new_expense_path, remote: true, class: "btn btn-primary" %>
-        New Expense
+          <span class="glyphicon glyphicon-plus"></span> <%= link_to "New Expense", new_expense_path, remote: true %>
+
           <h4 class="dropdown pull-right">
             <button type="button" class="dropdown-toggle btn btn-link" data-toggle="dropdown">April 2016 <span class="caret"></span></button>
             <ul class="dropdown-menu" role="menu">
@@ -57,27 +57,8 @@
         </thead>
         <tbody>
           <% @expenses.each do |expense| %>
-          <tr>
-            <td class="date">
-              <div><%= expense.date %></div>
-            </td>
-            <td>
-              <div>
-                <span class="type"><%= expense.type %></span>
-              </div>
-              <div>
-                <span class="concept">Example concept</span>
-              </div>
-            </td>
-            <td class="category text-right">Restauratns</td>
-            <td class="text-right" style="width: 170px;">
-              <div class="amount"><% expense.amount %></div>
-              <div class="actions">
-                <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                <a href="#"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-            </td>
+            <%= render "row", expense: expense %>
             <% end %>
-          </tr>
         </tbody>
       </table>
     </div>
