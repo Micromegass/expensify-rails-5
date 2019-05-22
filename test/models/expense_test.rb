@@ -9,6 +9,7 @@
 #  amount      :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category    :integer
 #
 
 require 'test_helper'
