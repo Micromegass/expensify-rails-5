@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
   end
 
   def update
-    @product = Expense.update(params[:id], expense_params)
+    @expense = Expense.update(params[:id], expense_params)
   end
 
 
