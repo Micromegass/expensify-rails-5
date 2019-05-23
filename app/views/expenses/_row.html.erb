@@ -2,9 +2,8 @@
   <td><%= expense.date %></td>
   <td><%= expense.type %></td>
   <td><%= expense.category %></td>
-  <td><%= expense.amount %></td>
+  <td><%= expense.amount %>
+    <%= link_to "Destroy", expense, method: :delete, data: {confirm: "Are you sure?", remote: true}, class:"delete" %>
+    <%= link_to "Edit", edit_expense_path(expense) %>
+</td>
 </tr>
-
-
-<%= link_to "Edit", edit_expense_path(expense), remote: true %>
-<%= link_to "Delete", edit_expense_path(expense), remote: true %>
