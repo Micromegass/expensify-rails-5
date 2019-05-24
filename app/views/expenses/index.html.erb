@@ -9,7 +9,9 @@
         </div>
         <% end %>
       </div>
-
+      <div>
+      <%= link_to 'education', {controller: 'expenses', action: 'index', :find_category => 'education'}  %>
+      </div>
       <h4 class="filter-header">Categoría <span>Selecciona para filtrar</span></h4>
       <div class="list-group filter-type">
         <% @expenses.categories.each do |category, enum| %>
@@ -31,7 +33,7 @@
           <div class="summary-label">Transactions</div>
         </div>
         <div class="summary-box col-md-4 text-center">
-          <div class="summary-value"> <%= calculate_average() %> </div>
+          <div class="summary-value"> <% calculate_average() %> </div>
           <div class="summary-label">Average</div>
         </div>
       </div>

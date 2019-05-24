@@ -17,6 +17,10 @@ class Expense < ApplicationRecord
 
   enum type: [:purchase, :payment, :transfer]
   enum category: [:education, :transport, :food, :alcohol, :rent]
+
+
+  scope :find_category, -> {Expense.where(category:"education")}
+
 end
 
 
